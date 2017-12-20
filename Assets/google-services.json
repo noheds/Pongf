@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "717804874497",
+    "firebase_url": "https://pong-574e7.firebaseio.com",
+    "project_id": "pong-574e7",
+    "storage_bucket": "pong-574e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717804874497:android:7eb59222a7a5cbe7",
+        "android_client_info": {
+          "package_name": "com.Nohe.nohe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717804874497-6gts9cj150upe3ob1n2gcoubpolm6t7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvNz7APf51dKsE3pVC089gVfD3uMJVY5s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
