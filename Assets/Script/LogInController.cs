@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Firebase;
 using Firebase.Database;
 using Firebase.Unity.Editor;
+using UnityEngine.SceneManagement;
 
 
 public class LogInController : MonoBehaviour {
@@ -12,6 +13,8 @@ public class LogInController : MonoBehaviour {
 	public InputField user;
 	public InputField pwdF;
 	public Button registerbutton;
+	public Text result;
+	public Toggle onlyPlayer;
 
 	private string userString;
 	private string pwdString;
@@ -61,11 +64,26 @@ public class LogInController : MonoBehaviour {
 					if (snapshot != null && snapshot.ChildrenCount > 0) {
 
 						foreach (var childSnapshot in snapshot.Children) {
-							var name = childSnapshot.Child ("name").Value.ToString (); 
+							var users = childSnapshot.Child ("username").Value.ToString (); 
+							var password = childSnapshot.Child ("pwd").Value.ToString ();
 
-							//text.text = name.ToString();
-							Debug.Log(name.ToString());
+							Debug.Log(users.ToString());
+							Debug.Log(password.ToString());
+							if(users == userString && password == pwdString){
+								
+								if(onlyPlayer.isOn){
 
+									SceneManager.LoadScene(2);
+
+								}else{
+
+
+									SceneManager.LoadScene(1);
+								}
+							}else{
+
+								result.text = "El usuario o la contraseña no coinciden con la base de datos";
+							}
 
 						}
 					}

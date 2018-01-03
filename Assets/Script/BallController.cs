@@ -37,11 +37,11 @@ public class BallController : MonoBehaviour {
 
         if (rdm < 1)
         {
-            rb.AddForce(new Vector2(1250, 500));
+            rb.AddForce(new Vector2(2500, 500));
         }
         else {
 
-            rb.AddForce(new Vector2(-1250, -500));
+            rb.AddForce(new Vector2(-2500, -500));
         }
 
 
